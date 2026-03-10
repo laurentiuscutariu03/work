@@ -3,18 +3,18 @@
 
   
 
-class CHostDrv extends CBaseDrv #(.VBUS (virtual bus.DRV), .MBX(host_mailbox), .TR(CHostTransaction));
+class CHostDrv extends CBaseDrv #(.VBUS (virtual hostif.DRV), .MBX(host_mailbox), .TR(CHostTransaction));
 
     function new(CBaseComponent parrent, string strName);
 		super.new(parrent, strName);
     endfunction
 
     function void InitSignals();
-      vbus.data <= 8'b0;
-      vbus.data_vld <= 1'b0;
+ //     vbus.data <= 8'b0;
+  //    vbus.data_vld <= 1'b0;
     endfunction
 
-    task Drive(CHostTransaction tr);	 
+    task Drive(TR tr);	 
 //      wait(vbus.clk ==0);
 /*      @(negedge vbus.clk);
 

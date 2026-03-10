@@ -5,14 +5,14 @@
 
 class CHostMon extends CBaseMon;
 
-    virtual bus.MON vbus;
+    virtual hostif.MON vbus;
 
     function new(CBaseComponent parrent, string strName);
 		super.new(parrent, strName);
     endfunction
 
 
-    function void connect(virtual bus.MON vbus);
+    function void connect(virtual hostif.MON vbus);
         this.vbus = vbus;
     endfunction
 

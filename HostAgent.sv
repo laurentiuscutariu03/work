@@ -3,7 +3,7 @@
 `define __CHostAgent__SV__
 
 
-class CHostAgent  #(Mode_t mode = ACTIVE) extends CBaseAgent #(.mode(mode), .BUS(virtual bus), .MBX(host_mailbox), .GEN(CHostMGen), .DRV(CHostDrv), .MON(CHostMon));
+class CHostAgent  #(Mode_t mode = ACTIVE) extends CBaseAgent #(.mode(mode), .BUS(virtual hostif), .MBX(host_mailbox), .GEN(CHostMGen), .DRV(CHostDrv), .MON(CHostMon));
 
     function new(CBaseComponent parrent, string strName);
 		super.new(parrent, strName);

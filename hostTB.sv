@@ -4,7 +4,7 @@
 package hostTB;
     import base::*;
     import host::*;
-	`include "HostEnv.sv"
-	`include "HostTest.sv"
+    `include "HostEnv.sv"
+    `include "HostTest.sv"
 endpackage
 

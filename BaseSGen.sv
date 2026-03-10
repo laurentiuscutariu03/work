@@ -4,8 +4,8 @@
 
 
 class CBaseSGen
-    #(type MBX /*= data_mailbox*/, 
-	   TR /*= CDataTransaction*/) extends CBaseComponent;
+        #(type MBX, TR) 
+        extends CBaseComponent;
     event ev_go;
     MBX mbx;
         function new(CBaseComponent parrent, string strName);

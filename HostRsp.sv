@@ -3,7 +3,7 @@
 `define __HostRsp__SV__
 
   
-class CHostRsp extends CBaseRsp #(.VBUS (virtual bus.RSP), .MBX(host_mailbox), .TR(CHostTransaction));
+class CHostRsp extends CBaseRsp #(.VBUS (virtual hostif.RSP), .MBX(host2_mailbox), .TR(CHostTransaction2));
 
     function new(CBaseComponent parrent, string strName);
 		super.new(parrent, strName);
@@ -14,7 +14,7 @@ class CHostRsp extends CBaseRsp #(.VBUS (virtual bus.RSP), .MBX(host_mailbox), .
 //      vbus.data_vld <= 1'b0;
     endfunction
 
-    task Response(CHostTransaction tr);	 
+    task Response(TR tr);	 
 //      wait(vbus.clk ==0);
 /*      @(negedge vbus.clk);
 

@@ -43,5 +43,15 @@ endclass
 
 typedef mailbox #(CHostTransaction) host_mailbox;
 
+virtual
+class CHostTransaction2 extends CBaseTransaction;
+    function new();
+        super.new();
+        strNameTransactionType = "HostTransaction";	
+    endfunction
+endclass
+
+typedef mailbox #(CHostTransaction2) host2_mailbox;
+
 
 `endif //__HostTransaction__SV

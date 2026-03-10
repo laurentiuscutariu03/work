@@ -3,9 +3,7 @@
 
 virtual 
 class CBaseDrv 
-        #(type VBUS /* = virtual bus.DRV*/, 
-               MBX /*= data_mailbox*/, 
-               TR /*= CDataTransaction*/) 
+        #(type VBUS, MBX, TR) 
         extends CBaseComponent;
         
     

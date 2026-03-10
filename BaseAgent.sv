@@ -5,10 +5,7 @@
 typedef enum {ACTIVE, PASIVE, REACTIVE} Mode_t;
 
 class CBaseAgent 
-       #(Mode_t mode = ACTIVE, type BUS /* virtual bus*/, MBX /*= data_mailbox*/, 
-         GEN /*= CMyMGen*/, 
-         DRV /*= CMyDrv*/, 
-         MON /*= CMyMon*/) 
+       #(Mode_t mode = ACTIVE, type BUS, MBX , GEN, DRV, MON) 
           extends CBaseComponent;
    MBX mbx;
    event ev_go;
