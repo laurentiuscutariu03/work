@@ -30,4 +30,5 @@ class CBaseSGen
     endtask
 endclass
 
+
 `endif //__BaseSGen__SV
